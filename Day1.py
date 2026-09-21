@@ -1,0 +1,5 @@
+import FastApi
+
+main = FastApi()
+
+
