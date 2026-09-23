@@ -1,0 +1,84 @@
+# ==========================================
+# FastAPI & Application Specific
+# ==========================================
+# Secret environment variables (Never commit these!)
+.env
+.env.*
+!.env.example
+
+# Local SQLite databases (frequently used in FastAPI development)
+*.db
+*.sqlite3
+*.sqlite3-journal
+
+# Application log files
+logs/
+*.log
+
+# ==========================================
+# Python Core & Caching
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==========================================
+# Virtual Environments
+# ==========================================
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# ==========================================
+# Testing & Code Quality
+# ==========================================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# ==========================================
+# Editor & IDE Settings
+# ==========================================
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (PyCharm)
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
