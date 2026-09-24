@@ -59,6 +59,7 @@ class TicketAssign(BaseModel):
     """Used by a Team Lead to assign or reassign a technician to a ticket."""
 
     assigned_to: str = Field(..., description="id of the Support Engineer to assign")
+    assigned_by: str = Field(..., description="id of the Team Lead performing this assignment")
 
 
 class TicketStatusUpdate(BaseModel):
@@ -72,6 +73,7 @@ class TicketStatusUpdate(BaseModel):
     """
 
     status: TicketStatus = Field(..., description="The status to move this ticket to")
+    changed_by: str = Field(..., description="id of the User performing this status change")
 
 
 class TicketResponse(BaseModel):
@@ -84,5 +86,6 @@ class TicketResponse(BaseModel):
     status: TicketStatus
     created_by: str
     assigned_to: Optional[str] = None
+    assigned_by: Optional[str] = None
     created_at: datetime
     updated_at: datetime

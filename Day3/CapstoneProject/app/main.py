@@ -5,6 +5,7 @@ from app.routers import users
 from app.routers import categories
 from app.routers import tickets
 from app.routers import comments
+from app.routers import audit_logs
 #creates faspapi app instance 
 app =FastAPI(title = settings.APP_NAME)
 
@@ -13,6 +14,7 @@ app.include_router(users.router)
 app.include_router(categories.router)
 app.include_router(tickets.router)
 app.include_router(comments.router)
+app.include_router(audit_logs.router)
 #this function runs once when the server starts.It checks the dB connection
 @app.on_event("startup")
 def on_startup():

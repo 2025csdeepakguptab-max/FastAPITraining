@@ -34,6 +34,6 @@ class CommentResponse(BaseModel):
 
     id: str
     ticket_id: str
-    author_id: str
-    content: str
-    created_at: datetime
+    author_id: str = Field(..., description="id of the User writing this comment")
+    content: str = Field(..., min_length=1, max_length=1000, description="The comment text")
+    created_at: datetime = Field(..., description="Timestamp of when the comment was created")
